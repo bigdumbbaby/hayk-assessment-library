@@ -47,5 +47,3 @@ p author1.list_books
 p author6.list_books
 
 #binding.pry
-
-#binding.pry
