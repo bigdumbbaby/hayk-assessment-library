@@ -39,4 +39,11 @@ book5.add_book_to_author(author6)
 book6 = Book.new "The Crying of Lot 49"
 book6.add_book_to_author(author6)
 
-binding.pry
+
+
+# TESTS
+p BookAuthor.get_list_of_books_authors("Calculus")
+p BookAuthor.get_list_of_authors_books("Tolkien")
+#p BookAuthor.get_list_of_authors_books("Thomas Pychon")
+
+#binding.pry
