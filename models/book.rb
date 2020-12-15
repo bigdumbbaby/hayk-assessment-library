@@ -9,15 +9,18 @@ class Book
       @@all << self
   end
 
-  def self.all
-    @@all
+  def add_author author 
+    BookAuthor.new self, author 
   end
 
-  def add_book_to_author author
-		found_author = Author.all.find do |look_author|
-			look_author.name == author.name
+  def list_authors 
+    authors = BookAuthor.all.select do | both |
+      both.book == self
     end
     #binding.pry
-		BookAuthor.new self, found_author
-	end
+
+    authors.map do |both|
+      both.author.name
+    end
+  end
 end
